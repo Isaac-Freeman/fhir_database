@@ -66,7 +66,7 @@ for root, _, files in os.walk(FHIR_DIR):
                                 coding = resource.get("code", {}).get("coding", [{}])[0]
                                 patient_ref = resource.get("subject", {}).get("reference", "")
                                 encounter_ref = resource.get("context", {}).get("reference", "")
-                                if patient_ref.split("/")[-1] if patient_ref else None in id_list:
+                                if patient_ref.split("/")[-1][9:] in id_list:
                                     conditions.append({
                                         "condition_id": resource.get("id"),
                                         "patient_id": patient_ref.split("/")[-1] if patient_ref else None,
@@ -78,7 +78,7 @@ for root, _, files in os.walk(FHIR_DIR):
                             elif r_type == "MedicationRequest":
                                 med_code = resource.get("medicationCodeableConcept", {}).get("coding", [{}])[0]
                                 patient_ref = resource.get("patient", {}).get("reference", "")
-                                if patient_ref.split("/")[-1] if patient_ref else None in id_list:
+                                if patient_ref.split("/")[-1][9:] in id_list:
                                     medications.append({
                                         "encounter_id": resource.get("context", {}).get("reference", ""),
                                         "patient_id": patient_ref.split("/")[-1] if patient_ref else None,
@@ -89,7 +89,7 @@ for root, _, files in os.walk(FHIR_DIR):
                             elif r_type == "Observation":
                                 patient_ref = resource.get("subject", {}).get("reference", "")
                                 encounter_ref = resource.get("encounter", {}).get("reference", "")
-                                if patient_ref.split("/")[-1] if patient_ref else None in id_list:
+                                if patient_ref.split("/")[-1][9:] in id_list:
                                     observations.append({
                                         "obs_id": resource.get("id"),
                                         "patient_id": patient_ref.split("/")[-1] if patient_ref else None,
@@ -108,7 +108,7 @@ for root, _, files in os.walk(FHIR_DIR):
                                 report_code = resource.get("code", {}).get("coding", [{}])[0]
                                 results_list = resource.get("result", [])
                                 result_names = ", ".join(res.get("display", "") for res in results_list if "display" in res)
-                                if patient_ref.split("/")[-1] if patient_ref else None in id_list:
+                                if patient_ref.split("/")[-1][9:] in id_list:
                                     diagnostic_reports.append({
                                         "report_id": resource.get("id"),
                                         "patient_id": patient_ref.split("/")[-1] if patient_ref else None,
