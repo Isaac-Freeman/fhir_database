@@ -52,7 +52,7 @@ def sample_pat_pop(count):
                 except Exception as e:
                     print(f"Error processing {file_path}: {e}")
     small = np.random.choice(patients, size=count, replace=False)
-    return small
+    return patients
 patients = sample_pat_pop(2000)
 np.save("patients_samp.npy", patients, allow_pickle=True)
 
