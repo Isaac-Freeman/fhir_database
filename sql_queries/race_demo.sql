@@ -1,0 +1,1 @@
+SELECT race, COUNT(race) FROM patient GROUP BY race
