@@ -1,4 +1,4 @@
-# 🏥 FHIR EHR Data Pipeline & Analytics Dashboard
+# FHIR EHR Data Pipeline & Analytics Dashboard
 
 An end-to-end healthcare data engineering pipeline that transforms raw FHIR-formatted electronic health record (EHR) data into a structured SQLite database and Power BI dashboard.
 
@@ -6,7 +6,7 @@ This project automates the extraction, normalization, storage, and visualization
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Healthcare data in FHIR (Fast Healthcare Interoperability Resources) format is deeply nested and complex. This project builds a complete pipeline that:
 
@@ -20,7 +20,7 @@ Healthcare data in FHIR (Fast Healthcare Interoperability Resources) format is d
 
 ---
 
-## 🏗 Architecture
+## Architecture
 Raw FHIR JSON Files
 ↓
 Python + NumPy Preprocessing
@@ -35,7 +35,7 @@ Power BI Dashboard (via ODBC)
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Python**
 - **NumPy** – data structuring and preprocessing
@@ -46,7 +46,7 @@ Power BI Dashboard (via ODBC)
 
 ---
 
-## 📂 Extracted FHIR Resources
+## Extracted FHIR Resources
 
 The pipeline extracts and structures the following FHIR resource types:
 
@@ -122,7 +122,7 @@ The pipeline extracts and structures the following FHIR resource types:
 
 ---
 
-## 🔍 Key Features
+## Key Features
 
 ### ✅ FHIR Parsing & Normalization
 - Walks directory of FHIR JSON bundles
