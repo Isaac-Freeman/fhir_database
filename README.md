@@ -58,6 +58,13 @@ The pipeline extracts and structures the following FHIR resource types:
 
 ---
 
+## 🗄 PowerBI Dashboard
+
+![PowerBI Abnormal Lab Dashboard](figures/pbi_dashboard.png "PowerBI Abnormal Lab Dashboard")
+
+The dashboard displays patient counts and histories surrounding abnormal urea nitrogen, hemoglobin, and potassium labs. While just an example, this could potentially tell hospital providers which patients are in need of special care during their stay.
+
+
 ## 🗄 Database Schema
 
 ### `patient`
@@ -147,12 +154,7 @@ The pipeline extracts and structures the following FHIR resource types:
   - Medication distribution
   - Patient demographics
 
-### ✅ Fully Automated Pipeline
-One script:
-- Parses raw data
-- Generates structured arrays
-- Builds database
-- Prepares for reporting
+
 
 No manual processing required.
 
