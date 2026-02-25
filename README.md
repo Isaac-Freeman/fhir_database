@@ -21,7 +21,7 @@ Healthcare data in FHIR (Fast Healthcare Interoperability Resources) format is d
 ---
 
 ## Architecture
-![Pipeline Flowchart](figures/pbiehrflowpic.drawio.png)
+![Pipeline Flowchart](figures/pbiehrflowsv.drawio.svg)
 
 Raw FHIR JSON Files
 ↓
